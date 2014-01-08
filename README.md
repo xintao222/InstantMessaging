@@ -11,7 +11,9 @@ InstantMessaging
 -  请求登录服务器并获取在线用户
 -  发起聊天请求
 -  关闭聊天窗口，保存聊天信息
-  
+
+你可以在这里查看界面设计和草图：[*这里*](http://kanlei.github.io/project/2014/01/08/instant-messaging/)
+
 ---
 
 ### English
@@ -24,3 +26,5 @@ InstantMessaging
 - login request and get online users' info
 - send chat request to other users
 - close chat form, save chat content
+
+You will see the GUI design and draft design: [*here*](http://kanlei.github.io/project/2014/01/08/instant-messaging/)
