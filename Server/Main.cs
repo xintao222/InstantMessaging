@@ -21,8 +21,8 @@ namespace Server
         }
 
 
-        const int PORT = 8500;
         UdpClient localClient;
+        IPEndPoint localIPE;
         IPEndPoint remoteIPE;
         List<UserRecords> userRecordsList;
         ChatMessage chatMessage;
@@ -31,8 +31,8 @@ namespace Server
             userRecordsList = new List<UserRecords>();
             byte[] receiveDgram;
             string msg = string.Empty;
-
-            localClient = new UdpClient(PORT);
+            localIPE = new IPEndPoint(IPAddress.Parse(txtIPAddress.Text), Convert.ToInt32(txtPort.Text));
+            localClient = new UdpClient(localIPE);
             remoteIPE = new IPEndPoint(IPAddress.Any, 0);  // receive any port and ipaddress
 
             while (true)
@@ -116,12 +116,9 @@ namespace Server
         }
 
         /// <summary>
-        /// 客户端退出
-        /// 获取当前退出的客户端信息并转发给其他客户端
+        /// Logoff
+        /// notify other users
         /// </summary>
-        /// <param name="msg">退出标识、用户名和端点信息</param>
-        /// <param name="userName">用户名</param>
-        /// <param name="flag">退出标识</param>
         private void ClientLogoff(ChatMessage chatMessage)
         {
             byte[] buffer = Encoding.Unicode.GetBytes(JsonConvert.SerializeObject(chatMessage));
