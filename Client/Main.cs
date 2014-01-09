@@ -198,6 +198,7 @@ namespace Client
         private void listViewOnlineUsers_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             string otherInfo = listViewOnlineUsers.SelectedItems[0].Text.Trim();
+            if (otherInfo == note) return;
             string[] other = otherInfo.Split('-');
             string otherIPAddress = other[1].Trim();  // get ip and port
             string[] ipAndPort = otherIPAddress.Split(':');
