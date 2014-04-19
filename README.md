@@ -14,6 +14,7 @@ InstantMessaging
 
 你可以在这里查看界面设计和草图：[*这里*](http://kanlei.github.io/project/2014/01/08/instant-messaging/)
 
+**更新的版本 [here](https://github.com/KanLei/UdpAndTcp)**
 ---
 
 ### English
@@ -28,3 +29,5 @@ InstantMessaging
 - close chat form, save chat content
 
 You will see the GUI design and draft design: [*here*](http://kanlei.github.io/project/2014/01/08/instant-messaging/)
+
+**And Update version [here](https://github.com/KanLei/UdpAndTcp)**
